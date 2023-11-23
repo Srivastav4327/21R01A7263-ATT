@@ -7,11 +7,18 @@ import org.openqa.selenium.interactions.Actions;
 public class Week11 {
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
-		System.setProperty("webdriver,chromedriver","C:\\Users\\student\\Music\\chromedriver.exe");
-		WebDriver driver=new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("https://www.myntra.com/");
+		
+		System.setProperty("webdriver,chrome.driver", "C:\\Users\\student\\Music\\chromedriver.exe");
+        	WebDriver driver = new ChromeDriver();
+        	driver.manage().window().maximize();
+        	driver.get("https://www.google.com");
+        	WebElement searchBox = driver.findElement(By.name("q"));    
+        	searchBox.sendKeys("myntra");
+        	searchBox.submit();
+ 
+        	WebElement link = driver.findElement(By.className("DKV0Md"));
+        	link.click();
+        	Thread.sleep(1000);
 		
 		WebElement Login = driver.findElement(By.className("desktop-userTitle"));
 		new Actions(driver).moveToElement(Login).perform();
