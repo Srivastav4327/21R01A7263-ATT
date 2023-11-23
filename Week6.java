@@ -22,11 +22,22 @@ public class Week6 {
 		WebElement phonenum = driver.findElement(By.name("username"));
 		Thread.sleep(2000);
 		phonenum.click();
-		phonenum.sendKeys("9248491127");
+		phonenum.sendKeys("9247191127");
 		
 		WebElement continueBtn = driver.findElement(By.className("login-btn"));
 		Thread.sleep(2000);
-		continueBtn.click();	
+		continueBtn.click();
+		
+		driver.switchTo().defaultContent();
+		Thread.sleep(1000);
+		
+		
+		WebElement otp = driver.findElement(By.name("otp"));
+		Thread.sleep(1000);
+		otp.sendKeys("7262");
+		
+		WebElement loginBtn = driver.findElement(By.className("login-btn"));
+		loginBtn.click();
 		
 	}
 
