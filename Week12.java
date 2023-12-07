@@ -20,7 +20,7 @@ public class Week12 {
 		
 		
 		WebElement selectDoc = driver.findElement(By.xpath("//*[@id=\"pickfiles\"]/span"));
-		selectPdf.click();
+		selectDoc.click();
 		
 		fileUpload("C:\\Users\\student\\Downloads\\Experiment-7.docx");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
