@@ -19,7 +19,7 @@ public class Week12 {
 		driver.manage().window().maximize();
 		
 		
-		WebElement selectPdf = driver.findElement(By.xpath("//*[@id=\"pickfiles\"]/span"));
+		WebElement selectDoc = driver.findElement(By.xpath("//*[@id=\"pickfiles\"]/span"));
 		selectPdf.click();
 		
 		fileUpload("C:\\Users\\student\\Downloads\\Experiment-7.docx");
